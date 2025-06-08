@@ -15,7 +15,16 @@ createRoot(document.getElementById("root")!).render(
       <CartProvider>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/order-summary" element={<OrderSummary />} />
+          <Route
+            path="/order-summary"
+            element={
+              <OrderSummary
+                onClose={() => {
+                  /* TODO: handle close */
+                }}
+              />
+            }
+          />
         </Routes>{" "}
       </CartProvider>
       <Toaster
